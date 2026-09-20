@@ -14,6 +14,15 @@
 		}
 	}
 
+	# Service worker at site root (Vite copies public/ into dist/)
+	handle /sw.js {
+		root * ./dist
+		header Cache-Control "no-cache"
+		header Content-Type "application/javascript; charset=utf-8"
+		header Service-Worker-Allowed "/"
+		file_server
+	}
+
 	# SPA static files from Vite build (relative to process cwd)
 	handle {
 		root * ./dist
