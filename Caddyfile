@@ -1,0 +1,28 @@
+{
+	auto_https off
+	admin off
+}
+
+:{$PORT:8080} {
+	encode gzip
+
+	# Proxy Launch Library 2 (avoids browser CORS in production)
+	handle /api/ll/* {
+		uri strip_prefix /api/ll
+		reverse_proxy https://ll.thespacedevs.com {
+			header_up Host ll.thespacedevs.com
+		}
+	}
+
+	# SPA static files from Vite build (relative to process cwd)
+	handle {
+		root * ./dist
+		try_files {path} /index.html
+		file_server
+	}
+
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+}

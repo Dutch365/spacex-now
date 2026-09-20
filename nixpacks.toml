@@ -1,0 +1,12 @@
+# Railway / Nixpacks — build Vite SPA, serve with Caddy on $PORT
+[phases.setup]
+nixPkgs = ["nodejs_20", "caddy"]
+
+[phases.install]
+cmds = ["npm ci || npm install"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "caddy run --config ./Caddyfile --adapter caddyfile"
