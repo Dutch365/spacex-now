@@ -406,3 +406,60 @@ body {
 
 .site-footer a { color: var(--text-muted); text-decoration: none; }
 .site-footer a:hover { color: var(--text); }
+
+/* ——— Notifications control ——— */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.notif-btn {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.notif-btn:hover:not(:disabled) {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.notif-btn.on {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+
+.notif-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.notif-btn.denied {
+  border-color: var(--danger);
+  color: #c88;
+}
+
+@media (max-width: 720px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
