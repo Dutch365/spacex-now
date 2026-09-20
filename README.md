@@ -1,6 +1,6 @@
-# SpaceX Now — Fort Mohave
+# SPACEX LAUNCH — Fort Mohave
 
-Unofficial SpaceX launch schedule for **Fort Mohave, AZ (86426)**, styled like spacex.com / SpaceX Now.
+Unofficial SpaceX launch schedule for **Fort Mohave, AZ (86426)**, branded **SPACEX LAUNCH** (styled like spacex.com).
 
 - Live upcoming launches from [Launch Library 2](https://thespacedevs.com/)
 - Local times in **America/Phoenix (PT / MST)**
@@ -34,7 +34,7 @@ From the repo root that contains this project (or make `spacex-now` the repo roo
 ```bash
 git init
 git add .
-git commit -m "SpaceX Now — Fort Mohave launch visibility"
+git commit -m "SPACEX LAUNCH — Fort Mohave launch visibility"
 # create empty repo on GitHub, then:
 git remote add origin https://github.com/<YOU>/<REPO>.git
 git branch -M main
