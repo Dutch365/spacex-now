@@ -1,5 +1,5 @@
 {
-  "name": "spacex-now",
+  "name": "spacex-launch",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,5 +10,6 @@
   },
   "devDependencies": {
     "vite": "^5.4.11"
-  }
+  },
+  "description": "SPACEX LAUNCH — Fort Mohave launch visibility"
 }
