@@ -23,6 +23,23 @@
 		file_server
 	}
 
+	# Web app manifest. Must not fall through to index.html — iOS treats
+	# an HTML response as "no manifest" and draws a letter icon.
+	handle /site.webmanifest {
+		root * ./dist
+		header Cache-Control "no-cache"
+		header Content-Type "application/manifest+json; charset=utf-8"
+		file_server
+	}
+
+	# Home-screen and notification icons. Serve the file or 404; never the SPA.
+	@icons path /favicon.png /apple-touch-icon.png /icon-192.png /icon-512.png /spacex-wordmark.png
+	handle @icons {
+		root * ./dist
+		header Cache-Control "public, max-age=3600"
+		file_server
+	}
+
 	# SPA static files from Vite build (relative to process cwd)
 	handle {
 		root * ./dist
