@@ -44,15 +44,16 @@ body {
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem 0.85rem;
 }
 
-.brand-mark {
-  font-size: 1.125rem;
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
+.brand-logo {
+  display: block;
+  height: 1rem;
+  width: auto;
+  flex: 0 0 auto;
 }
 
 .brand-sub {
