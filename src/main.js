@@ -431,7 +431,7 @@ function renderAppShell() {
   $('#app').innerHTML = `
     <header class="site-header">
       <div class="brand">
-        <div class="brand-mark">SPACEX</div>
+        <img class="brand-logo" src="/spacex-logo.svg" alt="SpaceX" width="107" height="16" />
         <div class="brand-sub">LAUNCH · Fort Mohave</div>
       </div>
       <div class="header-actions">
