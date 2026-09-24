@@ -276,8 +276,8 @@ async function registerServiceWorker() {
 
 async function showLaunchNotification(title, options) {
   const opts = {
-    icon: '/favicon.svg',
-    badge: '/favicon.svg',
+    icon: '/favicon.png',
+    badge: '/favicon.png',
     ...options,
   }
   try {
@@ -431,7 +431,7 @@ function renderAppShell() {
   $('#app').innerHTML = `
     <header class="site-header">
       <div class="brand">
-        <img class="brand-logo" src="/spacex-logo.svg" alt="SpaceX" width="107" height="16" />
+        <img class="brand-logo" src="/spacex-wordmark.png" alt="SpaceX" width="198" height="28" />
         <div class="brand-sub">LAUNCH · Fort Mohave</div>
       </div>
       <div class="header-actions">
